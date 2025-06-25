@@ -212,6 +212,7 @@ func (d *ServiceAccountDataSource) Read(ctx context.Context, req datasource.Read
 
 	model.Name = types.StringValue(serviceAccount.Name)
 	model.AccountID = customtypes.NewUUIDValue(serviceAccount.AccountID)
+	model.ActorID = customtypes.NewUUIDValue(serviceAccount.ActorID)
 
 	model.AccountRoleName = types.StringValue(serviceAccount.AccountRoleName)
 	model.APIKeyID = types.StringValue(serviceAccount.APIKey.ID)
